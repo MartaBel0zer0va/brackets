@@ -8,7 +8,15 @@ module.exports = function check(str, bracketsConfig) {
   var count = check(bracketsConfig[0]);
 var j;
 var counter = 0;
-
+for (j = 1, j < str, j++) {
+    if (bracketsConfig[j] == bracketsConfig[0])
+        counter++;
+    if (bracketsConfig[j] == count) {
+        if (counter == 0)
+            break;
+        counter--;
+    }
+}
 if (j == str )
     return false;
 if (j == 1)
